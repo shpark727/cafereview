@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 		if user.nil?
 			flash[:alert] = "아이디 또는 비번을 잘못 입력하셨습니다."
 			redirect_to :back
-		elsif user.userpassword != params[:password]
+		elsif user.userpassword != params[:userpassword]
 			flash[:alert] = "아이디 또는 비번을 잘못 입력하셨습니다."
 			redirect_to :back
 		else
@@ -39,5 +39,8 @@ class UsersController < ApplicationController
   end
 
   def logout_complete
+		reset_session
+		flash[:alert] = "성공적으로 로그아웃하였습니다."
+		redirect_to "/"
   end
 end
