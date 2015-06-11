@@ -8,14 +8,14 @@ class FoodsController < ApplicationController
 
   def posts_category
 		case params[:category]
-		when "korean"
-			@category ="한식"
-		when "japanese"
-			@category = "일식"
-		when "chinese"
-			@category = "중식"
+		when "Franchise"
+			@category ="Franchise"
+		when "Handdrip"
+			@category = "HandDrip"
+		when "Variation"
+			@category = "Variation"
 		else
-			@category ="양식"
+			@category ="Specialty"
 		end
 		@posts = Post.where(category: @category)
   end

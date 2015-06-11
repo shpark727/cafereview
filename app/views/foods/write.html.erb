@@ -9,22 +9,21 @@
 		<div class="col-md-4">
 		</div>
 		<div class="col-md-4 text-center">
-		<h3 class="form-heading">맛집 추가하기</h3>
-
-		<form action ="/foods/write_complete" method="post" enctype="multipart/form-data">
-			<p>+분류
-			<select name ="post_category">
-				<option value="한식">한식</option>
-				<option value="일식">일식</option>
-				<option value="중식">중식</option>
-				<option value="양식">양식</option>
-			</select></p>
-			<p><input class="form-input" type="text" name="post_title" placeholder="제목입력하세요"></p>
-			<p><textarea class="form-textarea" name="post_content" placeholder="내용을 입력하세요"></textarea></p>
-			<p>+ 사진 업로드</p>
-			<p><input type="file" name="image"></p>
-			<input class="btn btn-lg btn-black" type="submit" value="추가하기">
-		</form>
+			<h3 class="form-heading">Coffee Review작성하기</h3>
+			<form action ="/foods/write_complete" method="post" enctype="multipart/form-data">
+				<p>+분류
+				<select name="post_category">
+					<option value="Franchise">Franchise</option>
+					<option value="Handdrip">HandDrip</option>
+					<option value="Variation">Variation</option>
+					<option value="Specialty">Specialty</option>
+				</select></p>
+				<p><input class="form-input"  type="text" name="post_title" placeholder="제목 입력하세요"></p>
+				<p><textarea  class="form-textarea" name="post_content" placeholder="내용을 입력하세요"></textarea></p>
+				<p>+사진 업로드</p>
+				<p><input type="file" name="image"</p>
+				<input class="btn btn-lg btn-block" type="submit" value="추가하기">
+			</form>	
 		</div>
 		<div class="col-md-4">
 		</div>
